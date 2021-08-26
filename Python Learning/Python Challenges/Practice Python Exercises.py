@@ -28,6 +28,29 @@ def task_1():
 
 def task_2():
     print (exercises[1])
+    num = input("Please enter a number : ")
+    while num.isnumeric() != True:
+        num = ("Number incorrectly entered. Please re-enter a number : ")
+        if num.isnumeric() == True:
+            num = int(num)
+            break
+    num =int(num)
+    check = input("Enter a Check number :")
+    while check.isnumeric() != True:
+        check = ("Number incorrectly entered. Please re-enter a number : ")
+        if check.isnumeric() == True:
+            check = int(check)
+            break
+    check = int(check)
+    
+    if num%2 == 0:
+        print("Number",num,"is even")
+    elif num%2 == 1:
+        print("Number",num,"is odd")
+    if num%4 == 0:
+        print("Number",num,"is also multiple of 4")
+    if num%check == 0:
+        print("Number",num,"is divisible by ",check)
 
 def task_3():
     print (exercises[2])
