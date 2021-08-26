@@ -4,6 +4,27 @@ print (exercises)
 
 def task_1():
     print (exercises[0])
+    name = input("Please enter your name: ")
+    name = (name.lower()).capitalize()
+    if name.isalpha() != True:
+        re_enter_name = input("Incorrect characters entered please re-enter: ")
+        while re_enter_name.isalpha() == False:
+            re_enter_name = input("Incorrect characters entered please re-enter: ")
+            if re_enter_name.isalpha() == True:
+                name = (re_enter_name.lower()).capitalize()
+                break
+    else:
+        age = input("Please enter your age you will be this year: ")
+        if age.isnumeric() != True:
+            re_enter_age = input("Incorrect characters entered please re-enter: ")
+            while re_enter_age.isnumeric() == False:
+                re_enter_age = input("Incorrect characters entered please re-enter: ")
+                if re_enter_age.isnumeric() == True:
+                    age = re_enter_age
+                    break   
+        conversion = (2021 - int(age)+100)
+    
+    print(name,"You will be 100 years in the year",conversion)
 
 def task_2():
     print (exercises[1])
