@@ -54,6 +54,36 @@ def task_2():
 
 def task_3():
     print (exercises[2])
+    a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+    
+    choice = input("Would you to \n 1 - Use to base program \n 2 - Input? \n Anything else - Quit \n Choice: ")
+    while choice.isnumeric() == False:
+        choice = input("Invalid number entered please re-enter a number:")
+        if choice.isnumeric() == True:
+            break
+        else:
+            continue
+    if choice == "1":
+        for i in range(len(a)):
+            if a[i] <=5:
+                print(a[i], end=" ")
+            else:
+                continue
+    elif choice == "2":
+        number = input("Please enter a number: ")
+        while number.isnumeric() == False:
+            number = input("Invalid number entered please re-enter a number:")
+            if number.isnumeric() == True:
+                break
+            else:
+                continue
+        for i in range(len(a)):
+            if a[i] <= int(number):
+                print(a[i], end=" ")
+            else:
+                continue
+    else:
+        quit
 
 def task_4():
     print (exercises[3])
