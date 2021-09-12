@@ -5,5 +5,40 @@ exercises =["1: Character Input", "2: Odd Or Even", "3: List Less Than Ten", "4:
 
 def task_5():
     print (exercises[4])
+    a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+    b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
     
+    c = []
+    if len(a) < len(b):
+        j =0
+        for i in range (len(b)-1):
+            if a[j] == b[i]:
+                c.append(a[j])
+                i +=1
+                j +=1
+            elif a[j] != b[i]:
+                k=0
+                while k < len(b):
+                    if a[j] == b[k]:
+                        c.append(a[j])
+                        print(c)
+                        k=0
+                        break
+                    else:
+                        k += 1
+                        continue
+                i +=1
+                j +=1
+            else:
+                i +=1
+                j +=1
+            if j >=11:
+                j=0
+        
+        
+    elif len(a) > len(b):
+        print("TBF")
+    else:
+        print("TBF")    
+        
 task_5()

@@ -104,6 +104,7 @@ def task_4():
         else:
             i += 1
             continue
+        
 def task_5():
     print (exercises[4])
 
